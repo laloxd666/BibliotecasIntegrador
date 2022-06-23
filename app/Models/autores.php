@@ -11,7 +11,7 @@ class autores extends Model
     protected $table = 'autores';
 
     // clave primaria de la tabla 
-    protected $primaryKey = 'id_autor';
+    protected $primaryKey = 'id';
 
 
 
@@ -22,7 +22,7 @@ class autores extends Model
 
     // tabla que se va llenar
     protected $fillable = [
-        'id_autor',
+        'id',
         'nombre',
         'apellidos'
 
