@@ -17,5 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::apiResource('apiAutor', AutoresController::class);
+Route::get('/autores', [AutoresController::class, 'index']);
+
 
