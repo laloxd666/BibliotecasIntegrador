@@ -15,8 +15,7 @@ class AutoresController extends Controller
     public function index()
     {
         //
-         $autores = autores::all();
-        return response()->json([$autores], 200);
+        return $autores = autores::all();
     }
 
     /**
@@ -26,7 +25,6 @@ class AutoresController extends Controller
      */
     public function create()
     {
-        
     }
 
     /**
@@ -38,12 +36,9 @@ class AutoresController extends Controller
     public function store(Request $request)
     {
         $autores = new autores();
-        $autores->nombre=$request->get('nombre');
-        $autores->apellidos=$request->get('apellidos');
-        
-        
+        $autores->nombre = $request->get('nombre');
+        $autores->apellidos = $request->get('apellidos');
 
-        
         $autores->save();
     }
 
@@ -56,6 +51,8 @@ class AutoresController extends Controller
     public function show($id)
     {
         //
+        $autores = autores::find($id);
+        return $autores;
     }
 
     /**
@@ -66,7 +63,7 @@ class AutoresController extends Controller
      */
     public function edit($id)
     {
-        $autores=autores::find($id);
+        $autores = autores::find($id);
         return $autores;
     }
 
@@ -79,15 +76,11 @@ class AutoresController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $autores=autores::find($id);
-        $autores->nombre=$request->get('nombre');
-        $autores->apellidos=$request->get('apellidos');
-
-
-       
+        $autores = autores::find($id);
+        $autores->nombre = $request->get('nombre');
+        $autores->apellidos = $request->get('apellidos');
 
         $autores->update();
-    
     }
 
     /**
@@ -98,7 +91,7 @@ class AutoresController extends Controller
      */
     public function destroy($id)
     {
-        $autores=autores::find($id);
+        $autores = autores::find($id);
         $autores->delete();
     }
 }
