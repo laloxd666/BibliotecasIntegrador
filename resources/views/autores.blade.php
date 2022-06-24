@@ -5,15 +5,6 @@
 <!-- inicia vue -->
 <div id="autor">
 
-	<!-- <div class="row">
-			<div class="col-md-8">
-				<input type="number" placeholder="cantidad" class="form-control" v-model="cantidad"><br>
-				<input type="number" placeholder="precio" class="form-control" v-model="precio"><br>
-
-				<h5>TOTAL: @{{total}}</h5>
-			</div>
-			</div> -->
-
 	<div class="row">
 		<div class="col-md-8">
 
